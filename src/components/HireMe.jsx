@@ -26,20 +26,23 @@ const HireMe = ({ darkMode }) => {
           className={`rounded-2xl border ${cardBg} backdrop-blur-lg shadow-lg p-10 text-center`}
         >
           <h2 className={`text-3xl lg:text-4xl font-bold ${textPrimary}`}>
-            Let’s Connect & Work Together
+            Let's Connect & {" "}
+            <span className="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">
+              Work Together
+            </span>
           </h2>
 
           <p className={`mt-4 ${textSecondary}`}>
-            I’m currently open to data-focused opportunities and collaborations.
-            If you’re looking for someone who can turn data into meaningful insights,
-            I’d love to hear from you.
+            I'm currently open to data-focused opportunities and collaborations.
+            If you're looking for someone who can turn data into meaningful insights,
+            I'd love to hear from you.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
 
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com/in/YOUR_LINK"
+              href="https://linkedin.com/in/aileenghita"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-white font-semibold shadow-lg hover:shadow-xl transition"
@@ -50,23 +53,20 @@ const HireMe = ({ darkMode }) => {
 
             {/* Email */}
             <a
-              href="mailto:your.email@gmail.com"
-              className={`inline-flex items-center justify-center gap-3 px-6 py-3 rounded-full border font-semibold transition ${
-                darkMode
-                  ? "border-gray-600 text-white hover:bg-gray-800"
-                  : "border-gray-300 text-gray-800 hover:bg-gray-100"
-              }`}
+              href="mailto:aileenghita@gmail.com"
+              className={`inline-flex items-center justify-center gap-3 px-6 py-3 rounded-full border font-semibold transition ${darkMode
+                ? "border-gray-600 text-white hover:bg-gray-800"
+                : "border-gray-300 text-gray-800 hover:bg-gray-100"
+                }`}
             >
               <Mail className="w-5 h-5" />
               Send Me an Email
             </a>
-
           </div>
 
-          <p className={`mt-6 text-sm ${textMuted}`}>
-            Based in Indonesia • Open to remote opportunities
+          <p className={`mt-8 text-sm ${textMuted}`}>
+            Based in Jakarta, Indonesia
           </p>
-
         </motion.div>
       </div>
     </section>

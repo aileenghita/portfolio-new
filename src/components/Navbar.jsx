@@ -110,7 +110,7 @@ const Navbar = ({ darkMode, toogleDarkMode }) => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className={`hidden lg:block px-6 py-2 font-semibold rounded-full bg-linear-to-r ${colors.button} text-white shadow-md hover:shadow-lg transition-shadow`}>
-              Hire Me
+              Contact
             </motion.a>
             {/* Mobile Menu Button */}
             <div className="flex lg:hidden items-center space-x-4 px-2">
