@@ -7,6 +7,7 @@ import About from "./components/About"
 import Skills from "./components/Skill"
 import Projects from "./components/Projects"
 import HireMe from "./components/HireMe"
+import Background from "./components/Background"
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(true)
@@ -36,6 +37,7 @@ const App = () => {
       <Hero darkMode={darkMode} />
       <About darkMode={darkMode} />
       <Skills darkMode={darkMode}/>
+      <Background darkMode={darkMode}/>
       <Projects darkMode={darkMode}/>
       <HireMe darkMode={darkMode}/>
     </div>

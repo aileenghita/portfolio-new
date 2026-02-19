@@ -10,6 +10,7 @@ const Navbar = ({ darkMode, toogleDarkMode }) => {
     { name: 'Home', link: '#home' },
     { name: 'About Me', link: '#about' },
     { name: 'Skills', link: '#skills' },
+    { name: 'Background', link: '#background' },
     { name: 'Projects', link: '#projects' },
   ];
 
