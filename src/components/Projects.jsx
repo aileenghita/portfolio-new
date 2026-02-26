@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, ExternalLink } from "lucide-react";
+import { Github, BarChart3 } from "lucide-react";
 
 const Projects = ({ darkMode }) => {
   const baseBg = darkMode
@@ -16,44 +16,25 @@ const Projects = ({ darkMode }) => {
 
   const projects = [
     {
-      title: "USD/IDR Forecasting (LSTM + GARCH)",
-      desc: "Hybrid deep learning model to forecast exchange rates with volatility integration.",
-      tools: ["Python", "LSTM", "GARCH", "Pandas"],
-      result: "Improved RMSE compared to baseline LSTM model.",
-      github: "#",
-      demo: "#",
+      title: "Sales & Profitability Diagnostic Dashboard",
+      desc: "Analyzed unusual profit declines despite increasing sales through quarter-level, regional, and product analysis.",
+      tools: ["Tableau"],
+      result: "Identified margin compression driven by aggressive discounting and low-margin sub-categories, leading to actionable data-driven recommendations.",
+      github: "https://drive.google.com/file/d/1GdoD60XIxpUdNS3TjAYunRo_mdl6jUFe/view?usp=sharing",
+      dashboard: "https://public.tableau.com/app/profile/aileen.ghita.gianna/viz/Superstore_17718369305430/Sales?publish=yes",
     },
     {
-      title: "Customer Sales Analysis",
-      desc: "Exploratory data analysis to identify revenue drivers and purchasing behavior.",
-      tools: ["Python", "SQL", "Matplotlib"],
-      result: "Identified top 20% customers contributing 65% revenue.",
-      github: "#",
-      demo: "#",
+      title: "E-Bookstore Database & Business Insight Analysis",
+      desc: "Designed a relational database for an online bookstore and built analytical SQL queries to uncover revenue, customer behavior, inventory risk, and fulfillment backlog.",
+      tools: ["SQL", "Relational Database Design"],
+      result: "Investigated overstock patterns, inactive customers, and non-delivered transactions, leading to actionable recommendations on inventory turnover and customer retention.",
+      github: "https://github.com/aileenghita/data-analysis-portfolio/tree/main/ebookstore-sql",
     },
     {
-      title: "Interactive Sales Dashboard",
-      desc: "Business dashboard to monitor KPIs and sales performance.",
-      tools: ["Power BI", "Excel"],
-      result: "Enabled weekly performance tracking for decision-making.",
-      github: "#",
-      demo: "#",
-    },
-    {
-      title: "Frontend Messaging Platform",
-      desc: "Broadcast messaging platform supporting up to 10k recipients per batch.",
-      tools: ["Vue.js", "TypeScript"],
-      result: "Improved performance and reduced UI loading time.",
-      github: "#",
-      demo: "#",
-    },
-    {
-      title: "Mini ML Classification",
-      desc: "Basic classification model for churn prediction.",
-      tools: ["Python", "Scikit-learn"],
-      result: "Achieved 87% accuracy on test data.",
-      github: "#",
-      demo: "#",
+      title: "USD/IDR Exchange Rate Forecasting & Trading Strategy",
+      desc: "Implemented and compared standalone LSTM and hybrid GARCH-LSTM models for USD/IDR exchange rate forecasting, translating predictive outputs into rule-based trading strategies.",
+      tools: ["Python", "TensorFlow/Keras", "arch", "pandas", "NumPy", "pandas"],
+      result: "Identified the best-performing model based on RMSE, MAE, and R², and validated predictive utility through backtesting using Sharpe ratio, drawdown, and annualized return metrics.",
     },
   ];
 
@@ -69,13 +50,13 @@ const Projects = ({ darkMode }) => {
           className="text-center"
         >
           <h2 className={`text-3xl lg:text-4xl font-bold ${textPrimary}`}>
-            Featured{" "}
+            Selected {" "}
             <span className="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">
               Projects
             </span>
           </h2>
           <p className={`mt-4 max-w-3xl mx-auto ${textSecondary}`}>
-            Selected projects demonstrating analytics, forecasting, and frontend capabilities.
+            A selection of projects showcasing data analytics, machine learning, and business insights.
           </p>
         </motion.div>
 
@@ -103,11 +84,10 @@ const Projects = ({ darkMode }) => {
                   {project.tools.map((tool) => (
                     <span
                       key={tool}
-                      className={`px-3 py-1 rounded-full text-xs border ${
-                        darkMode
-                          ? "border-white/10 text-gray-200 bg-white/5"
-                          : "border-gray-200 text-gray-700 bg-white/60"
-                      }`}
+                      className={`px-3 py-1 rounded-full text-xs border ${darkMode
+                        ? "border-white/10 text-gray-200 bg-white/5"
+                        : "border-gray-200 text-gray-700 bg-white/60"
+                        }`}
                     >
                       {tool}
                     </span>
@@ -120,25 +100,30 @@ const Projects = ({ darkMode }) => {
               </div>
 
               <div className="mt-6 flex gap-3">
-                <a
-                  href={project.github}
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-white text-sm font-medium"
-                >
-                  <Github className="w-4 h-4" />
-                  Code
-                </a>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-white text-sm font-medium"
+                    target="_blank"
+                  >
+                    <Github className="w-4 h-4" />
+                    Github
+                  </a>
+                )}
 
-                <a
-                  href={project.demo}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-medium ${
-                    darkMode
+                {project.dashboard && (
+                  <a
+                    href={project.dashboard}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-medium ${darkMode
                       ? "border-gray-600 text-white hover:bg-gray-800"
                       : "border-gray-300 text-gray-800 hover:bg-gray-100"
-                  }`}
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  Demo
-                </a>
+                      }`}
+                    target="_blank"
+                  >
+                    <BarChart3 className="w-4 h-4" />
+                    Dashboard
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}

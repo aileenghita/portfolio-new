@@ -130,47 +130,6 @@ const Hero = ({ darkMode }) => {
               </div>
             </div>
           </div>
-
-
-          {/* socials (right side)
-          <div className="hidden lg:flex flex-col gap-3 ml-6">
-            <a
-              href="https://linkedin.com/in/YOUR_LINK"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`w-11 h-11 rounded-full border flex items-center justify-center transition ${darkMode
-                ? "border-white/10 bg-white/5 hover:bg-white/10 text-white"
-                : "border-gray-200 bg-white/70 hover:bg-white text-gray-800"
-                } backdrop-blur`}
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="w-5 h-5" />
-            </a>
-
-            <a
-              href="https://github.com/YOUR_USERNAME"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`w-11 h-11 rounded-full border flex items-center justify-center transition ${darkMode
-                ? "border-white/10 bg-white/5 hover:bg-white/10 text-white"
-                : "border-gray-200 bg-white/70 hover:bg-white text-gray-800"
-                } backdrop-blur`}
-              aria-label="GitHub"
-            >
-              <Github className="w-5 h-5" />
-            </a>
-
-            <a
-              href="mailto:your.email@gmail.com"
-              className={`w-11 h-11 rounded-full border flex items-center justify-center transition ${darkMode
-                ? "border-white/10 bg-white/5 hover:bg-white/10 text-white"
-                : "border-gray-200 bg-white/70 hover:bg-white text-gray-800"
-                } backdrop-blur`}
-              aria-label="Email"
-            >
-              <Mail className="w-5 h-5" />
-            </a>
-          </div> */}
         </motion.div>
       </div>
 

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const HireMe = ({ darkMode }) => {
   const baseBg = darkMode
@@ -61,6 +61,19 @@ const HireMe = ({ darkMode }) => {
             >
               <Mail className="w-5 h-5" />
               Send Me an Email
+            </a>
+
+            {/* Github */}
+            <a
+              href="https://github.com/aileenghita/data-analysis-portfolio"
+              target="_blank"
+              className={`inline-flex items-center justify-center gap-3 px-6 py-3 rounded-full border font-semibold transition ${darkMode
+                ? "border-gray-600 text-white hover:bg-gray-800"
+                : "border-gray-300 text-gray-800 hover:bg-gray-100"
+                }`}
+            >
+              <Github className="w-5 h-5" />
+              View Github
             </a>
           </div>
 

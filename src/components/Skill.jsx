@@ -18,22 +18,22 @@ const Skills = ({ darkMode }) => {
     {
       icon: <Database className="w-5 h-5 text-white" />,
       title: "Data",
-      items: ["Python", "SQL", "Excel", "EDA", "Data Cleaning", "Forecasting"],
+      items: ["Python", "SQL", "R", "Excel (Solver)"],
     },
     {
       icon: <BarChart3 className="w-5 h-5 text-white" />,
       title: "Visualization",
-      items: ["Power BI", "Tableau (basic)", "Matplotlib", "Reporting"],
+      items: ["Power BI", "Tableau"],
     },
     {
       icon: <Braces className="w-5 h-5 text-white" />,
-      title: "Frontend",
-      items: ["Vue.js", "React", "TypeScript", "Tailwind", "Framer Motion"],
+      title: "Technical",
+      items: ["Vue.js", "TypeScript", "JavaScript", "Android Studio", "Java", "Kotlin"],
     },
     {
       icon: <Wrench className="w-5 h-5 text-white" />,
       title: "Tools",
-      items: ["Git", "Postman", "VS Code", "Jira", "Figma (basic)"],
+      items: ["Git", "Postman", "VS Code", "Jira"],
     },
   ];
 
