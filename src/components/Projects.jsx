@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, BarChart3 } from "lucide-react";
+import { Github, BarChart3, Presentation } from "lucide-react";
 
 const Projects = ({ darkMode }) => {
   const baseBg = darkMode
@@ -16,12 +16,11 @@ const Projects = ({ darkMode }) => {
 
   const projects = [
     {
-      title: "Sales & Profitability Diagnostic Dashboard",
-      desc: "Analyzed unusual profit declines despite increasing sales through quarter-level, regional, and product analysis.",
-      tools: ["Tableau"],
-      result: "Identified margin compression driven by aggressive discounting and low-margin sub-categories, leading to actionable data-driven recommendations.",
-      github: "https://drive.google.com/file/d/1GdoD60XIxpUdNS3TjAYunRo_mdl6jUFe/view?usp=sharing",
-      dashboard: "https://public.tableau.com/app/profile/aileen.ghita.gianna/viz/Superstore_17718369305430/Sales?publish=yes",
+      title: "USD/IDR Exchange Rate Forecasting & Trading Strategy",
+      desc: "Developed an end-to-end forecasting and trading strategy pipeline using a hybrid GARCH–LSTM model to predict USD/IDR movements and evaluate performance against a buy-and-hold benchmark through backtesting.",
+      tools: ["Python", "TensorFlow/Keras", "arch", "pandas, NumPy", "Scikit-learn", "Matplotlib/Seaborn"],
+      result: "The tuned GARCH-LSTM model achieved RMSE of 67.47 and R² of 0.976, and the resulting trading strategy generated total return of 7.92% with Sharpe Ratio of 0.87, outperforming the buy-and-hold benchmark.",
+      github: "https://github.com/aileenghita/data-analysis-portfolio/tree/main/GARCH-LSTM%20for%20USD-IDR%20Forecasting"
     },
     {
       title: "E-Bookstore Database & Business Insight Analysis",
@@ -31,11 +30,13 @@ const Projects = ({ darkMode }) => {
       github: "https://github.com/aileenghita/data-analysis-portfolio/tree/main/ebookstore-sql",
     },
     {
-      title: "USD/IDR Exchange Rate Forecasting & Trading Strategy",
-      desc: "Implemented and compared standalone LSTM and hybrid GARCH-LSTM models for USD/IDR exchange rate forecasting, translating predictive outputs into rule-based trading strategies.",
-      tools: ["Python", "TensorFlow/Keras", "arch", "pandas", "NumPy", "pandas"],
-      result: "Identified the best-performing model based on RMSE, MAE, and R², and validated predictive utility through backtesting using Sharpe ratio, drawdown, and annualized return metrics.",
-    },
+      title: "Sales & Profitability Diagnostic Dashboard",
+      desc: "Analyzed unusual profit declines despite increasing sales through quarter-level, regional, and product analysis.",
+      tools: ["Tableau"],
+      result: "Identified margin compression driven by aggressive discounting and low-margin sub-categories, leading to actionable data-driven recommendations.",
+      fulldeck: "https://drive.google.com/file/d/1GdoD60XIxpUdNS3TjAYunRo_mdl6jUFe/view?usp=sharing",
+      dashboard: "https://public.tableau.com/app/profile/aileen.ghita.gianna/viz/Superstore_17718369305430/Sales?publish=yes",
+    }
   ];
 
   return (
@@ -108,6 +109,17 @@ const Projects = ({ darkMode }) => {
                   >
                     <Github className="w-4 h-4" />
                     Github
+                  </a>
+                )}
+
+                {project.fulldeck && (
+                  <a
+                    href={project.fulldeck}
+                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-white text-sm font-medium"
+                    target="_blank"
+                  >
+                    <Presentation className="w-4 h-4" />
+                    Full-Deck
                   </a>
                 )}
 
